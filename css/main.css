@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  overflow: auto;
+  background-color: #007bff;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+#kanban {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.column {
+  float: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  width: 19%;
+  padding: 10px;
+  padding-top: 20px;
+  margin-right: 15px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+h1 {
+  display: block;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(17, 117, 162, 0.59);
+  font-weight: 400;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+h2 {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 15px;
+}
+.card h3,
+.card p {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card::after {
+  content: "x";
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  line-height: 20px;
+  background-color: red;
+}
+
+.card:hover .tag i {
+  color: rgba(17, 117, 162, 0.59);
+}
+
+.card:hover {
+  background: rgba(17, 117, 162, 0.59);
+  cursor: pointer;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: whitesmoke;
+}
+
+.card:hover::after {
+  background-color: red;
+  color: white;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+}
+.tag i {
+  color: white;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+
+.front {
+  background-color: lightgreen;
+}
+
+.back {
+  background-color: red;
+}
+
+.device {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=main.css.map */

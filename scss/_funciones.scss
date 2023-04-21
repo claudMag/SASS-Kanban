@@ -1,0 +1,13 @@
+@use 'variables';
+
+@mixin circulo-bg( $icon-size) {
+    width: $icon-size;	
+    height: $icon-size;
+    border-radius: 50%;
+    line-height: $icon-size;
+}
+
+@mixin element-card(){
+    display: inline-block;
+    margin-bottom: 10px;
+}

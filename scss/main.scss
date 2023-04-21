@@ -1,0 +1,131 @@
+@use 'variables';
+@import 'funciones';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-stack;
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    overflow: auto;
+    background-color: variables.$primary-color;
+    background-image: variables.$background-photo;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+#kanban {
+    width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.column {
+    float: left;
+    background-color: variables.$column-color;
+    border-radius: variables.$border-radius;
+    width: 19%;
+    padding: 10px;
+    padding-top: 20px;
+    margin-right: 15px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+h1 {
+    display: block;
+    color: variables.$light-color;
+    padding: 10px;
+    border-radius: variables.$border-radius;
+    background: variables.$background-color;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+h2{
+    @include element-card();
+}
+
+.card {
+    background: variables.$card-color;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 15px;
+
+    h3,
+    p {
+        @include element-card();
+    }
+}
+
+.card::after {
+    content: "x";
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    @include circulo-bg($icon-size: 20px);
+    background-color: variables.$back-color;
+
+}
+
+.card:hover .tag i {
+    color: variables.$background-color;
+}
+.card:hover {
+    background: variables.$background-color;
+    cursor: pointer;
+}
+
+.card:hover h3,
+.card:hover p {
+    color: variables.$font-hover-color;
+}
+.card:hover::after {
+    background-color: variables.$back-color;
+    color:variables.$light-color;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    text-align: center;
+    @include circulo-bg($icon-size: 30px);
+
+    i {
+        color:variables.$light-color;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.front {
+    background-color: variables.$front-color;
+}
+
+.back {
+    background-color: variables.$back-color;
+}
+
+.device {
+    background-color: variables.$device-color;
+}
